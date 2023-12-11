@@ -1,0 +1,6 @@
+//breakpoints
+@mixin mobile {
+  @media screen and (max-width: #{$mobile * 2}px) {
+    @content;
+  }
+}

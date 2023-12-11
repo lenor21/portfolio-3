@@ -1,0 +1,42 @@
+.c-header {
+  height: 8rem;
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      &__anchor {
+        display: flex;
+        text-decoration: none;
+        color: #333;
+        font-family: $poppins;
+        column-gap: 1rem;
+        align-items: center;
+
+        &__icon-cont {
+          height: 5rem;
+          width: 5rem;
+
+          &__icon {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+          }
+        }
+
+        &__txt {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

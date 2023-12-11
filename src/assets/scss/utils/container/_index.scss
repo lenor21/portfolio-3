@@ -1,0 +1,11 @@
+.container {
+  max-width: 116rem;
+  margin: 0 auto;
+  padding: 0 4rem;
+
+  @include mobile {
+    width: auto;
+    margin: 0 20px;
+    padding: 0;
+  }
+}

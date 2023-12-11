@@ -1,0 +1,20 @@
+.p-home {
+  &__hero {
+    height: 100vh;
+    background: url('../../../../../public/images/pages/home/pc/hero.jpg') no-repeat center center/cover;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: #333;
+      opacity: 0.8;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+  }
+}

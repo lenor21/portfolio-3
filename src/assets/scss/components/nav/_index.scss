@@ -1,0 +1,27 @@
+.c-nav {
+  display: flex;
+  column-gap: 4rem;
+  align-items: center;
+
+  &__links {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+
+    &__item {
+      list-style: none;
+
+      &__anchor {
+        text-decoration: none;
+        font-weight: 600;
+        font-family: $poppins;
+      }
+    }
+  }
+
+  &__contact {
+    text-decoration: none;
+    color: #333;
+    font-family: $poppins;
+  }
+}
