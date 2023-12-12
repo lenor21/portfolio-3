@@ -3,13 +3,16 @@
   width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 999;
+  transition: 0.3s;
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
 
     &__logo {
       &__anchor {
@@ -40,6 +43,19 @@
           }
         }
       }
+    }
+  }
+
+  &.is-active {
+    top: 2rem;
+    max-width: 116rem;
+  }
+
+  &.is-active & {
+    &__inner {
+      background: #ff0;
+      padding: 0 4rem;
+      border-radius: 4rem;
     }
   }
 }

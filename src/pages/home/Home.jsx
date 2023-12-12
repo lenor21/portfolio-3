@@ -1,6 +1,7 @@
 const Home = () => {
   return (
     <div className='p-home'>
+
       <section className='p-home__hero'>
         <div className='container'>
           <div className='p-home__hero__inner'>
@@ -24,6 +25,15 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="p-home__about">
+        <div className="container">
+          <div className="p-home__about__inner">
+            hello
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };

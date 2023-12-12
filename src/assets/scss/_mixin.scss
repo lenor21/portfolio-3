@@ -1,4 +1,16 @@
 //breakpoints
+@mixin laptop {
+  @media screen and (max-width: #{$laptop}px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: #{$tablet}px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (max-width: #{$mobile * 2}px) {
     @content;

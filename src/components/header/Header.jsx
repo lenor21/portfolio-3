@@ -1,6 +1,49 @@
+import { useState, useEffect } from 'react';
+
 const Header = () => {
+  const [show, setShow] = useState(true);
+  const [scroll, setScroll] = useState({
+    y: 0,
+    lastY: 0
+  });
+
+  useEffect(() => {
+    const controlHeader = () => {
+      setScroll(prev => {
+        return {
+          y: window.scrollY,
+          lastY: prev.y
+        }
+      });
+    }
+
+    window.addEventListener('scroll', controlHeader);
+
+    return () => {
+      window.removeEventListener('scroll', controlHeader);
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log(scroll);
+    console.log(show);
+
+    if (scroll.y === 0) {
+      setShow(true);
+    }
+    
+    if (scroll.y > 100) {
+      setShow(false);
+    }
+
+    if (scroll.y < scroll.lastY) {
+      setShow(true);
+    }
+
+  }, [scroll, show]);
+
   return (
-    <div className='c-header'>
+    <div className={`c-header ${!show ? "is-active" : ""}`}>
       <div className='container'>
         <div className='c-header__inner'>
           <h1 className='c-header__inner__logo'>

@@ -34,6 +34,14 @@
           color: #333;
           font-family: $poppins;
           font-weight: bold;
+
+          @include laptop {
+            font-size: 1.8rem;
+          }
+
+          @include tablet {
+            font-size: 1.6rem;
+          }
         }
 
         &__head {
@@ -43,6 +51,14 @@
           color: #333;
           font-family: $poppins;
           margin: 0;
+
+          @include laptop {
+            font-size: 4.5rem;
+          }
+
+          @include tablet {
+            font-size: 3.5rem;
+          }
 
           &__gradient {
             background: rgb(53, 79, 82);
@@ -83,6 +99,11 @@
         }
       }
     }
+  }
+
+  &__about {
+    height: 100vh;
+    width: 100%;
   }
 }
 
