@@ -43,6 +43,25 @@
           color: #333;
           font-family: $poppins;
           margin: 0;
+
+          &__gradient {
+            background: rgb(53, 79, 82);
+            background: linear-gradient(90deg, rgba(53, 79, 82, 1) 25%, rgba(132, 169, 139, 1) 50%, rgba(197, 216, 197, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          &__border {
+            font-size: 6rem;
+            color: #fff;
+            letter-spacing: 0.05em;
+            padding: 0 1rem;
+            background: linear-gradient(90deg, rgba(53, 79, 82, 1) 25%, rgba(132, 169, 139, 1) 50%, rgba(197, 216, 197, 1) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-stroke: 1rem transparent;
+            animation: gradient 5s ease infinite;
+            background-size: 200% 200%;
+          }
         }
 
         &__btn-cont {
@@ -64,5 +83,19 @@
         }
       }
     }
+  }
+}
+
+@keyframes gradient {
+  0%{
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }

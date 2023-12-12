@@ -7,7 +7,7 @@ const Home = () => {
             <div className='p-home__hero__inner__details'>
               <p className='p-home__hero__inner__details__sml'>HELLO WORLD, WELCOME TO MY SITE</p>
               <h1 className='p-home__hero__inner__details__head'>
-                I’m Ronel De Jesus <br /> A Software & Web Developer
+                I’m <span className="p-home__hero__inner__details__head__gradient">Ronel De Jesus</span> <br /> A Software & Web <span className="p-home__hero__inner__details__head__border">DEVELOPER</span>
               </h1>
               <div className='p-home__hero__inner__details__btn-cont'>
                 <a href='#' className='c-button__secondary'>
