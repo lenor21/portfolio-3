@@ -1,0 +1,33 @@
+.c-button {
+    &__primary {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 0.1rem solid #354F52;
+        color: #fff;
+        background: #354F52;
+        height: 5rem;
+        display: grid;
+        place-items: center;
+        font-family: $poppins;
+        padding: 0 3rem;
+        border-radius: 0.5rem;
+        width: max-content;
+    }
+
+    &__secondary {
+        text-decoration: none;
+        font-size: 1.6rem;
+        font-weight: 500;
+        border: 0.1rem solid #C5D8C5;
+        color: #333;
+        background: #C5D8C5;
+        height: 5rem;
+        display: grid;
+        place-items: center;
+        font-family: $poppins;
+        padding: 0 3rem;
+        border-radius: 0.5rem;
+        width: max-content;
+    }
+}

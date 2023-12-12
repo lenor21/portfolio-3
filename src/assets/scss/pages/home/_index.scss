@@ -2,7 +2,7 @@
   &__hero {
     min-height: 70rem;
     width: 100%;
-    background: url('../../../../../public/images/pages/home/pc/hero.jpg') no-repeat center center/cover;
+    background: url('/images/pages/home/pc/hero.jpg') no-repeat center center/cover;
     position: relative;
     z-index: 1;
 
@@ -19,7 +19,7 @@
     }
 
     &__inner {
-      padding-top: 10rem;
+      padding-top: 13rem;
       position: relative;
       z-index: 3;
       display: flex;
@@ -43,6 +43,13 @@
           color: #333;
           font-family: $poppins;
           margin: 0;
+        }
+
+        &__btn-cont {
+          display: flex;
+          column-gap: 2rem;
+          align-items: center;
+          margin-top: 4rem;
         }
       }
 

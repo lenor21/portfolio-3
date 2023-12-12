@@ -1,11 +1,11 @@
 .c-nav {
   display: flex;
-  column-gap: 4rem;
+  column-gap: 6rem;
   align-items: center;
 
   &__links {
     display: flex;
-    column-gap: 2rem;
+    column-gap: 4rem;
     align-items: center;
 
     &__item {
@@ -13,8 +13,10 @@
 
       &__anchor {
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 500;
         font-family: $poppins;
+        font-size: 1.6rem;
+        color: #333;
       }
     }
   }
@@ -23,5 +25,6 @@
     text-decoration: none;
     color: #333;
     font-family: $poppins;
+    font-size: 1.6rem;
   }
 }

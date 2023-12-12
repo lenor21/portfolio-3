@@ -6,7 +6,7 @@ const Header = () => {
           <h1 className='c-header__inner__logo'>
             <a href='#' className='c-header__inner__logo__anchor'>
               <div className='c-header__inner__logo__anchor__icon-cont'>
-                <img className='c-header__inner__logo__anchor__icon-cont__icon' src='../public/images/common/pc/logo.svg' alt='logo' />
+                <img className='c-header__inner__logo__anchor__icon-cont__icon' src='/images/common/pc/logo.svg' alt='logo' />
               </div>
               <p className='c-header__inner__logo__anchor__txt'>
                 <span className='c-header__inner__logo__anchor__txt__span'>Ronel</span>
@@ -38,7 +38,7 @@ const Header = () => {
                 </a>
               </li>
             </ul>
-            <a href='#' className='c-nav__contact'>
+            <a href='#' className='c-button__primary'>
               Contact me
             </a>
           </nav>

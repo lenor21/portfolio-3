@@ -10,16 +10,16 @@ const Home = () => {
                 I’m Ronel De Jesus <br /> A Software & Web Developer
               </h1>
               <div className='p-home__hero__inner__details__btn-cont'>
-                <a href='#' className='c-button'>
+                <a href='#' className='c-button__secondary'>
                   Download CV
                 </a>
-                <a href='#' className='c-button'>
+                <a href='#' className='c-button__primary'>
                   Contact Me
                 </a>
               </div>
             </div>
             <div className='p-home__hero__inner__img-cont'>
-              <img src='../public/images/pages/home/pc/hero.svg' alt='hero-img' className='p-home__hero__inner__img-cont__img' />
+              <img src='/images/pages/home/pc/hero.svg' alt='hero-img' className='p-home__hero__inner__img-cont__img' />
             </div>
           </div>
         </div>
