@@ -25,9 +25,6 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    console.log(scroll);
-    console.log(show);
-
     if (scroll.y === 0) {
       setShow(true);
     }
@@ -36,7 +33,7 @@ const Header = () => {
       setShow(false);
     }
 
-    if (scroll.y < scroll.lastY) {
+    if (scroll.y < scroll.lastY && scroll.y < 100) {
       setShow(true);
     }
 
