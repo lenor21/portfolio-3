@@ -1,3 +1,5 @@
+import { FaRegEnvelope, FaDownload  } from "react-icons/fa6";
+
 const Home = () => {
   return (
     <div className='p-home'>
@@ -13,9 +15,11 @@ const Home = () => {
               <div className='p-home__hero__inner__details__btn-cont'>
                 <a href='#' className='c-button__secondary is-full'>
                   Download CV
+                  <FaDownload className="c-button__secondary__icon" />
                 </a>
                 <a href='#' className='c-button__primary is-full'>
                   Contact Me
+                  <FaRegEnvelope className="c-button__primary__icon" />
                 </a>
               </div>
             </div>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaXmark } from "react-icons/fa6";
+import { FaBars, FaXmark, FaRegEnvelope } from "react-icons/fa6";
 
 const Header = () => {
   const [menu, setMenu] = useState(true);
@@ -86,6 +86,7 @@ const Header = () => {
             </ul>
             <a href='#' className='c-button__primary'>
               Contact me
+              <FaRegEnvelope className="c-button__primary__icon" />
             </a>
           </nav>
 
