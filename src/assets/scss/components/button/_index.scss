@@ -13,6 +13,13 @@
         padding: 0 3rem;
         border-radius: 0.5rem;
         width: max-content;
+
+        @include sp {
+            &.is-full {
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+        }
     }
 
     &__secondary {
@@ -29,5 +36,12 @@
         padding: 0 3rem;
         border-radius: 0.5rem;
         width: max-content;
+
+        @include sp {
+            &.is-full {
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+        }
     }
 }

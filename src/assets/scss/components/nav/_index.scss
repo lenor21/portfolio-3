@@ -2,11 +2,36 @@
   display: flex;
   column-gap: 6rem;
   align-items: center;
+  transition: 0.3s;
+
+  @include tablet {
+    display: none;
+  }
+
+  &.is-active {
+    display: flex;
+    position: absolute;
+    top: 8rem;
+    background: rgba($color: #fff, $alpha: 0.9);
+    box-shadow: 0 0 3rem rgba($color: #000, $alpha: 0.3);
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 1rem;
+    flex-direction: column;
+    row-gap: 4rem;
+    padding: 4rem
+  }
 
   &__links {
     display: flex;
     column-gap: 4rem;
     align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      row-gap: 4rem;
+    }
 
     &__item {
       list-style: none;

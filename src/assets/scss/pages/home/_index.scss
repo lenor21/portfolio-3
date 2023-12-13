@@ -1,6 +1,6 @@
 .p-home {
   &__hero {
-    min-height: 70rem;
+    height: auto;
     width: 100%;
     background: url('/images/pages/home/pc/hero.jpg') no-repeat center center/cover;
     position: relative;
@@ -19,15 +19,33 @@
     }
 
     &__inner {
-      padding-top: 13rem;
+      padding: 13rem 0 10rem;
       position: relative;
       z-index: 3;
       display: flex;
       column-gap: 2rem;
       align-items: center;
 
+      @include tablet {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 4rem;
+        padding-top: 9rem;
+        padding-bottom: 9rem;
+      }
+
+      @include sp {
+        padding-bottom: 7rem;
+      }
+
       &__details {
         width: 55rem;
+        text-align: start;
+
+        @include tablet {
+          text-align: center;
+          width: 100%;
+        }
 
         &__sml {
           font-size: 2.4rem;
@@ -41,6 +59,10 @@
 
           @include tablet {
             font-size: 1.6rem;
+          }
+
+          @include sp {
+            font-size: 1.4rem;
           }
         }
 
@@ -57,7 +79,11 @@
           }
 
           @include tablet {
-            font-size: 3.5rem;
+            font-size: 4rem;
+          }
+
+          @include sp {
+            font-size: 3rem;
           }
 
           &__gradient {
@@ -77,6 +103,10 @@
             -webkit-text-stroke: 1rem transparent;
             animation: gradient 5s ease infinite;
             background-size: 200% 200%;
+
+            @include tablet {
+              font-size: 5rem;
+            }
           }
         }
 
@@ -85,12 +115,29 @@
           column-gap: 2rem;
           align-items: center;
           margin-top: 4rem;
+
+          @include tablet {
+            justify-content: center;
+          }
+
+          @include sp {
+            flex-direction: column;
+            row-gap: 1rem;
+          }
         }
       }
 
       &__img-cont {
         height: auto;
         width: 55rem;
+
+        @include tablet {
+          width: 45rem;
+        }
+
+        @include sp {
+          width: 100%;
+        }
 
         &__img {
           height: 100%;

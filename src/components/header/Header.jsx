@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
+import { FaBars, FaXmark } from "react-icons/fa6";
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
   const [show, setShow] = useState(true);
   const [scroll, setScroll] = useState({
     y: 0,
     lastY: 0
   });
+
+  const handleMenu = () => {
+    setMenu(!menu);
+  }
 
   useEffect(() => {
     const controlHeader = () => {
@@ -55,7 +61,7 @@ const Header = () => {
             </a>
           </h1>
 
-          <nav className='c-nav'>
+          <nav className={`c-nav ${!menu ? "is-active" : ""}`}>
             <ul className='c-nav__links'>
               <li className='c-nav__links__item'>
                 <a href='#' className='c-nav__links__item__anchor'>
@@ -82,6 +88,14 @@ const Header = () => {
               Contact me
             </a>
           </nav>
+
+          <button onClick={handleMenu} className="c-header__inner__menu">
+            { menu 
+              ?  <FaBars className="c-header__inner__menu__icon" />
+              :  <FaXmark className="c-header__inner__menu__icon" />
+            }
+            
+          </button>
         </div>
       </div>
     </div>

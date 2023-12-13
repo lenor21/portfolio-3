@@ -11,10 +11,10 @@ const Home = () => {
                 I’m <span className="p-home__hero__inner__details__head__gradient">Ronel De Jesus</span> <br /> A Software & Web <span className="p-home__hero__inner__details__head__border">DEVELOPER</span>
               </h1>
               <div className='p-home__hero__inner__details__btn-cont'>
-                <a href='#' className='c-button__secondary'>
+                <a href='#' className='c-button__secondary is-full'>
                   Download CV
                 </a>
-                <a href='#' className='c-button__primary'>
+                <a href='#' className='c-button__primary is-full'>
                   Contact Me
                 </a>
               </div>

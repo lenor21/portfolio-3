@@ -11,6 +11,12 @@
   }
 }
 
+@mixin sp {
+  @media screen and (max-width: #{$sp}px) {
+    @content;
+  }
+}
+
 @mixin mobile {
   @media screen and (max-width: #{$mobile * 2}px) {
     @content;
