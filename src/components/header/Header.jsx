@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaBars, FaXmark } from "react-icons/fa6";
 
 const Header = () => {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
   const [show, setShow] = useState(true);
   const [scroll, setScroll] = useState({
     y: 0,
