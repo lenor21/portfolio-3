@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { FaBars, FaXmark, FaRegEnvelope } from "react-icons/fa6";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [menu, setMenu] = useState(true);
@@ -10,7 +11,7 @@ const Header = () => {
   });
 
   const handleMenu = () => {
-    setMenu(!menu);
+    setMenu(prev => !prev);
   }
 
   useEffect(() => {
@@ -45,6 +46,11 @@ const Header = () => {
 
   }, [scroll, show]);
 
+  const variants = {
+    visible: {opacity: 1}, 
+    hidden: {opacity: 0}
+  }
+
   return (
     <div className={`c-header ${!show ? "is-active" : ""}`}>
       <div className='container'>
@@ -61,7 +67,13 @@ const Header = () => {
             </a>
           </h1>
 
-          <nav className={`c-nav ${!menu ? "is-active" : ""}`}>
+          <motion.nav 
+            className={`c-nav ${!menu ? "is-active" : ""}`}
+            transition={{ duration: 2 }}
+            variants={variants}
+            initial="hidden"
+            animate={!menu ? "visible" : "hidden"}
+          >
             <ul className='c-nav__links'>
               <li className='c-nav__links__item'>
                 <a href='#' className='c-nav__links__item__anchor'>
@@ -88,7 +100,7 @@ const Header = () => {
               Contact me
               <FaRegEnvelope className="c-button__primary__icon" />
             </a>
-          </nav>
+          </motion.nav>
 
           <button onClick={handleMenu} className="c-header__inner__menu">
             { menu 
