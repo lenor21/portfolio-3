@@ -1,0 +1,11 @@
+.u-pc-only {
+    @include tablet {
+        display: none;
+    }
+}
+
+.u-sp-only {
+    @include pc {
+        display: none;
+    }
+}

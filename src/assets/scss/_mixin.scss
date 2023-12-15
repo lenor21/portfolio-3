@@ -1,4 +1,10 @@
 //breakpoints
+@mixin pc {
+  @media screen and (min-width: #{$tablet + 1}px) {
+    @content;
+  }
+}
+
 @mixin laptop {
   @media screen and (max-width: #{$laptop}px) {
     @content;

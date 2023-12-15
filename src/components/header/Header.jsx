@@ -47,8 +47,8 @@ const Header = () => {
   }, [scroll, show]);
 
   const variants = {
-    visible: {opacity: 1}, 
-    hidden: {opacity: 0}
+    visible: {y: 0, opacity: 1, transition: {type: "spring", stiffness: 100, damping: 10}}, 
+    hidden: {y: "-100%", x: "-50%"}
   }
 
   return (
@@ -67,9 +67,37 @@ const Header = () => {
             </a>
           </h1>
 
+          <nav className={`c-nav u-pc-only`}>
+            <ul className='c-nav__links'>
+              <li className='c-nav__links__item'>
+                <a href='#' className='c-nav__links__item__anchor'>
+                  About Me
+                </a>
+              </li>
+              <li className='c-nav__links__item'>
+                <a href='#' className='c-nav__links__item__anchor'>
+                  Skills
+                </a>
+              </li>
+              <li className='c-nav__links__item'>
+                <a href='#' className='c-nav__links__item__anchor'>
+                  Projects
+                </a>
+              </li>
+              <li className='c-nav__links__item'>
+                <a href='#' className='c-nav__links__item__anchor'>
+                  FAQ
+                </a>
+              </li>
+            </ul>
+            <a href='#' className='c-button__primary'>
+              Contact me
+              <FaRegEnvelope className="c-button__primary__icon" />
+            </a>
+          </nav>
+
           <motion.nav 
-            className={`c-nav ${!menu ? "is-active" : ""}`}
-            transition={{ duration: 2 }}
+            className={`c-nav u-sp-only ${!menu ? "is-active" : ""}`}
             variants={variants}
             initial="hidden"
             animate={!menu ? "visible" : "hidden"}
