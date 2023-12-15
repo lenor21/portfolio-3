@@ -96,39 +96,7 @@ const Header = () => {
             </a>
           </nav>
 
-          <motion.nav 
-            className={`c-nav u-sp-only ${!menu ? "is-active" : ""}`}
-            variants={variants}
-            initial="hidden"
-            animate={!menu ? "visible" : "hidden"}
-          >
-            <ul className='c-nav__links'>
-              <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
-                  About Me
-                </a>
-              </li>
-              <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
-                  Skills
-                </a>
-              </li>
-              <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
-                  Projects
-                </a>
-              </li>
-              <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
-                  FAQ
-                </a>
-              </li>
-            </ul>
-            <a href='#' className='c-button__primary'>
-              Contact me
-              <FaRegEnvelope className="c-button__primary__icon" />
-            </a>
-          </motion.nav>
+          
 
           {/* <button onClick={handleMenu} className="c-header__inner__menu">
             { menu 
@@ -138,12 +106,51 @@ const Header = () => {
             
           </button> */}
 
-          <button onClick={handleMenu} className={`hamburger hamburger--squeeze ${!menu ? "is-active" : ""}`} type="button">
+          <button onClick={handleMenu} className={`hamburger hamburger--squeeze ${!menu ? "is-active" : ""} u-sp-only`} type="button">
             <span className="hamburger-box">
               <span className="hamburger-inner"></span>
             </span>
           </button>
         </div>
+
+        <div className="container">
+          
+        </div>
+
+        <motion.nav 
+          className={`c-nav u-sp-only ${!menu ? "is-active" : ""}`}
+          variants={variants}
+          initial="hidden"
+          animate={!menu ? "visible" : "hidden"}
+        >
+          <ul className='c-nav__links'>
+            <li className='c-nav__links__item'>
+              <a href='#' className='c-nav__links__item__anchor'>
+                About Me
+              </a>
+            </li>
+            <li className='c-nav__links__item'>
+              <a href='#' className='c-nav__links__item__anchor'>
+                Skills
+              </a>
+            </li>
+            <li className='c-nav__links__item'>
+              <a href='#' className='c-nav__links__item__anchor'>
+                Projects
+              </a>
+            </li>
+            <li className='c-nav__links__item'>
+              <a href='#' className='c-nav__links__item__anchor'>
+                FAQ
+              </a>
+            </li>
+          </ul>
+          <a href='#' className='c-button__primary'>
+            Contact me
+            <FaRegEnvelope className="c-button__primary__icon" />
+          </a>
+        </motion.nav>
+        
       </div>
     </div>
   );

@@ -86,10 +86,13 @@
 
   &.is-active & {
     &__inner {
-      background: rgba($color: #fff, $alpha: 0.9);
+      background: rgba($color: #fff, $alpha: 0.2);
       box-shadow: 0 0 3rem rgba($color: #000, $alpha: 0.3);
       padding: 0 4rem;
       border-radius: 4rem;
+      border: 0.1rem solid #fff;
+      backdrop-filter: blur(2rem);
+      -webkit-backdrop-filter: blur(20px);
 
       @include sp {
         padding: 0 2.5rem;

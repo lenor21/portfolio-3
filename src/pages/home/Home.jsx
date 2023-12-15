@@ -34,7 +34,7 @@ const Home = () => {
   }
 
   return (
-    <div className='p-home'>
+    <div className='p-home' ref={ref}>
 
       <section className='p-home__hero'>
         <div className='container'>
@@ -46,7 +46,6 @@ const Home = () => {
                 variants={variants}
                 initial="hidden"
                 animate={mainControls}
-                ref={ref}
               >
                 I’m <span className="p-home__hero__inner__details__head__gradient">Ronel De Jesus</span> <br /> A Software & Web <span className="p-home__hero__inner__details__head__border">DEVELOPER</span>
               </motion.h1>
@@ -75,7 +74,6 @@ const Home = () => {
               variants={variants}
               initial="hidden"
               animate={mainControls}
-              ref={ref}
             >
               Hello
             </motion.h1>
