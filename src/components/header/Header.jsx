@@ -47,7 +47,7 @@ const Header = () => {
   }, [scroll, show]);
 
   const variants = {
-    visible: {y: 0, opacity: 1, transition: {duration: 0.5}}, 
+    visible: {y: 0, opacity: 1, transition: {duration: 0.2}}, 
     hidden: {y: "-100%", x: "-50%"}
   }
 
@@ -130,12 +130,18 @@ const Header = () => {
             </a>
           </motion.nav>
 
-          <button onClick={handleMenu} className="c-header__inner__menu">
+          {/* <button onClick={handleMenu} className="c-header__inner__menu">
             { menu 
               ?  <FaBars className="c-header__inner__menu__icon" />
               :  <FaXmark className="c-header__inner__menu__icon" />
             }
             
+          </button> */}
+
+          <button onClick={handleMenu} class={`hamburger hamburger--collapse ${!menu ? "is-active" : ""}`} type="button">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
         </div>
       </div>
