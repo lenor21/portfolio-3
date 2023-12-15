@@ -138,9 +138,9 @@ const Header = () => {
             
           </button> */}
 
-          <button onClick={handleMenu} class={`hamburger hamburger--squeeze ${!menu ? "is-active" : ""}`} type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
+          <button onClick={handleMenu} className={`hamburger hamburger--squeeze ${!menu ? "is-active" : ""}`} type="button">
+            <span className="hamburger-box">
+              <span className="hamburger-inner"></span>
             </span>
           </button>
         </div>

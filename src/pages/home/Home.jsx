@@ -1,9 +1,20 @@
 import { FaRegEnvelope, FaDownload  } from "react-icons/fa6";
 import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
+import { motion, useInView, useAnimation } from "framer-motion";
 
 const Home = () => {
   const el1 = useRef(null);
+  const ref = useRef(null);
+  const isInView = useInView(ref, {once: true});
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      console.log("hello");
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   useEffect(() => {
     const typed1 = new Typed(el1.current, {
@@ -17,6 +28,10 @@ const Home = () => {
     }
   }, []);
   
+  const variants = {
+    visible: {opacity: 1, transition: {duration: 2, delay: 0.5}}, 
+    hidden: {opacity: 0}
+  }
 
   return (
     <div className='p-home'>
@@ -26,9 +41,15 @@ const Home = () => {
           <div className='p-home__hero__inner'>
             <div className='p-home__hero__inner__details'>
               <p className='p-home__hero__inner__details__sml'><span ref={el1} /></p>
-              <h1 className='p-home__hero__inner__details__head'>
+              <motion.h1 
+                className='p-home__hero__inner__details__head'
+                variants={variants}
+                initial="hidden"
+                animate={mainControls}
+                ref={ref}
+              >
                 I’m <span className="p-home__hero__inner__details__head__gradient">Ronel De Jesus</span> <br /> A Software & Web <span className="p-home__hero__inner__details__head__border">DEVELOPER</span>
-              </h1>
+              </motion.h1>
               <div className='p-home__hero__inner__details__btn-cont'>
                 <a href='#' className='c-button__secondary is-full'>
                   Download CV
@@ -50,7 +71,14 @@ const Home = () => {
       <section className="p-home__about">
         <div className="container">
           <div className="p-home__about__inner">
-            hello
+            <motion.h1
+              variants={variants}
+              initial="hidden"
+              animate={mainControls}
+              ref={ref}
+            >
+              Hello
+            </motion.h1>
           </div>
         </div>
       </section>
