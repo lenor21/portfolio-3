@@ -138,7 +138,7 @@ const Header = () => {
             
           </button> */}
 
-          <button onClick={handleMenu} class={`hamburger hamburger--collapse ${!menu ? "is-active" : ""}`} type="button">
+          <button onClick={handleMenu} class={`hamburger hamburger--squeeze ${!menu ? "is-active" : ""}`} type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>
             </span>
