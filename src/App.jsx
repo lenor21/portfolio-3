@@ -3,6 +3,7 @@ import RootLayout from './pages/root-layout/RootLayout';
 import Home from './pages/home/Home';
 
 const App = () => {
+
   return (
     <div>
       <Router>
