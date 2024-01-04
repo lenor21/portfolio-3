@@ -2,6 +2,9 @@ import { FaRegEnvelope, FaDownload  } from "react-icons/fa6";
 import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from "framer-motion";
+import { register } from 'swiper/element/bundle';
+
+register();
 
 const Home = () => {
   const el1 = useRef(null);
@@ -70,13 +73,60 @@ const Home = () => {
       <section className="p-home__about">
         <div className="container">
           <div className="p-home__about__inner">
-            <motion.h1
-              variants={variants}
-              initial="hidden"
-              animate={mainControls}
-            >
-              Hello
-            </motion.h1>
+            
+            <h2 className="c-heading">
+              <p className="c-heading__txt">ABOUT ME</p>
+            </h2>
+
+            <div className="p-home__about__inner__details">
+              <div className="p-home__about__inner__details__slide">
+                <swiper-container
+                  slides-per-view="1"
+                  mousewheel-force-to-axis="true"
+                  loop="true"
+                  css-mode="true"
+                  autoplay="true"
+                  className="p-home__about__inner__details__slide__container"
+                >
+                  <swiper-slide className="p-home__about__inner__details__slide__container__img-cont">
+                    <img className="p-home__about__inner__details__slide__container__img-cont__img" src="/images/pages/home/pc/img-about-01.jpg" />
+                  </swiper-slide>
+                  <swiper-slide className="p-home__about__inner__details__slide__container__img-cont">
+                    <img className="p-home__about__inner__details__slide__container__img-cont__img" src="/images/pages/home/pc/img-about-02.jpeg" />
+                  </swiper-slide>
+                  <swiper-slide className="p-home__about__inner__details__slide__container__img-cont">
+                    <img className="p-home__about__inner__details__slide__container__img-cont__img" src="/images/pages/home/pc/img-about-03.jpeg" />
+                  </swiper-slide>
+                  ...
+                </swiper-container>
+              </div>
+              <div className="p-home__about__inner__details__info">
+
+                <div className="p-home__about__inner__details__info__wrap">
+                  <p className="p-home__about__inner__details__info__item">
+                    <span className="p-home__about__inner__details__info__item__ttl">Full Name</span>
+                    <span className="p-home__about__inner__details__info__item__txt">Ronel Talavera De Jesus</span>
+                  </p>
+
+                  <p className="p-home__about__inner__details__info__item">
+                    <span className="p-home__about__inner__details__info__item__ttl">Degree</span>
+                    <span className="p-home__about__inner__details__info__item__txt">BS Computer Engineering</span>
+                  </p>
+
+                  <p className="p-home__about__inner__details__info__item">
+                    <span className="p-home__about__inner__details__info__item__ttl">School</span>
+                    <span className="p-home__about__inner__details__info__item__txt">Don Honorio Ventura State University</span>
+                  </p>
+
+                  <p className="p-home__about__inner__details__info__item">
+                    <span className="p-home__about__inner__details__info__item__ttl">Location</span>
+                    <span className="p-home__about__inner__details__info__item__txt">Macabebe, Pampanga, Philippines</span>
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
           </div>
         </div>
       </section>

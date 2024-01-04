@@ -5,6 +5,7 @@
     background: url('/images/pages/home/pc/hero.jpg') no-repeat center center/cover;
     position: relative;
     z-index: 1;
+    mix-blend-mode: multiply;
 
     &::before {
       content: '';
@@ -153,8 +154,67 @@
   }
 
   &__about {
-    height: 100vh;
-    width: 100%;
+    padding: 10rem 0;
+    background: #f2f2f2;
+
+    &__inner {
+      &__details {
+        display: grid;
+        grid-template-columns: 40rem auto;
+        margin-top: 10rem;
+        justify-content: center;
+        column-gap: 10rem;
+
+        &__slide {
+          height: 60rem;
+          width: 40rem;
+          box-shadow: 2rem 2rem 0 rgba($color: #333, $alpha: 1.0);
+
+          &__container {
+            height: 100%;
+            width: 100%;
+
+            &__img-cont {
+              height: 100%;
+              width: 100%;
+
+              &__img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+
+        &__info {
+          width: max-content;
+          display: grid;
+          place-items: center;
+
+          &__wrap {
+            display: flex;
+            flex-direction: column;
+            row-gap: 2rem;
+            background: #C5D8C5;
+            border-radius: 2rem;
+            padding: 2rem;
+            border: 0.3rem solid #333;
+          }
+
+          &__item {
+            font-size: 2rem;
+            font-family: $poppins;
+            display: grid;
+            grid-template-columns: 15rem 1fr;
+
+            &__ttl {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
