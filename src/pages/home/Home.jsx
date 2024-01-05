@@ -131,6 +131,118 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="p-home__skills">
+        <div className="container">
+          <div className="p-home__skills__inner">
+
+            <h2 className="c-heading">
+              <p className="c-heading__txt">SKILLS</p>
+            </h2>
+
+            <div className="p-home__skills__inner__content">
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
