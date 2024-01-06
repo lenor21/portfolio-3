@@ -3,6 +3,8 @@ import Typed from 'typed.js';
 import { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from "framer-motion";
 import { register } from 'swiper/element/bundle';
+import Projects from '../../assets/data/Projects';
+import Card from '../../components/card/Card';
 
 register();
 
@@ -11,6 +13,15 @@ const Home = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, {once: true});
   const mainControls = useAnimation();
+
+  const cards = Projects.map((item) => {
+    return (
+      <Card 
+        key={item.id}
+        {...item}
+      />
+    )
+  })
 
   useEffect(() => {
     if (isInView) {
@@ -237,6 +248,32 @@ const Home = () => {
                 </div>
               </div>
 
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="p-home__projects">
+        <div className="container">
+          <div className="p-home__projects__inner">
+
+            <h2 className="c-heading">
+              <p className="c-heading__txt">PROJECTS</p>
+            </h2>
+
+            <div className="p-home__projects__inner__items">
+              <swiper-container
+                slides-per-view="3"
+                mousewheel-force-to-axis="true"
+                loop="true"
+                css-mode="true"
+                navigation="true" 
+                pagination="true" 
+                className="p-home__projects__inner__items__slide"
+              >
+                {cards}
+              </swiper-container>
             </div>
 
           </div>
