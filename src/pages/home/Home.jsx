@@ -265,9 +265,8 @@ const Home = () => {
             <div className="p-home__projects__inner__items">
               <swiper-container
                 slides-per-view="3"
-                mousewheel-force-to-axis="true"
+                space-between="30"
                 loop="true"
-                css-mode="true"
                 navigation="true" 
                 pagination="true" 
                 className="p-home__projects__inner__items__slide"

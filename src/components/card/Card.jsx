@@ -4,7 +4,7 @@ register();
 
 const Card = (props) => {
   return (
-    <swiper-slide className="c-card">
+    <swiper-slide>
         <a href="#" className="c-card__link">
             <div className="c-card__link__img-cont">
                 <img className="c-card__link__img-cont__img" src="/images/common/pc/react-weather-app.png" />
