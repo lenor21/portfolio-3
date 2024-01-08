@@ -188,7 +188,7 @@
         }
 
         &__info {
-          width: max-content;
+          max-width: max-content;
           display: grid;
           place-items: center;
 
@@ -266,6 +266,19 @@
           height: 100%;
           width: 100%;
         }
+      }
+    }
+  }
+
+  &__faq {
+    padding: 10rem 0 15rem;
+
+    &__inner {
+      &__accordion {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
       }
     }
   }

@@ -5,6 +5,8 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { register } from 'swiper/element/bundle';
 import Projects from '../../assets/data/Projects';
 import Card from '../../components/card/Card';
+import Faq from '../../assets/data/Faq';
+import Accordion from '../../components/accordion/Accordion';
 
 register();
 
@@ -273,6 +275,28 @@ const Home = () => {
               >
                 {cards}
               </swiper-container>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="p-home__faq">
+        <div className="container">
+          <div className="p-home__faq__inner">
+
+            <h2 className="c-heading">
+              <p className="c-heading__txt">FAQ</p>
+            </h2>
+
+            <div className="p-home__faq__inner__accordion">
+              {
+                Faq.map((item) => {
+                  return (
+                    <Accordion key={item} {...item}  />
+                  )
+                })
+              }
             </div>
 
           </div>

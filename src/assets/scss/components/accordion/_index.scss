@@ -1,0 +1,41 @@
+.c-accordion {
+    font-size: 2rem;
+    border-radius: 2rem;
+    font-family: $poppins;
+    background: #c5d8c533;
+
+    &__summary {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        padding: 3rem 6rem 3rem 3rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+
+        &::-webkit-details-marker {
+            display: none;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: .4em;
+            height: .4em;
+            right: 3rem;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            border-right: 0.5rem solid #84A98B;
+            border-bottom: 0.5rem solid #84A98B;
+            transform: rotate(45deg);
+        }
+    }
+
+    &__content {
+        padding: 0 3rem 3rem;
+    }
+
+    &[open] &__summary::after {
+        transform: rotate(-135deg);
+    }
+}
