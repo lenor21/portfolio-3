@@ -303,6 +303,18 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="p-home__contact">
+        <div className="container">
+          <div className="p-home__contact__inner">
+
+            <h2 className="c-heading">
+              <p className="c-heading__txt">CONTACT</p>
+            </h2>
+
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
