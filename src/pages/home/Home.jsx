@@ -7,6 +7,7 @@ import Projects from '../../assets/data/Projects';
 import Card from '../../components/card/Card';
 import Faq from '../../assets/data/Faq';
 import Accordion from '../../components/accordion/Accordion';
+import Form from '../../components/form/Form';
 
 register();
 
@@ -234,12 +235,6 @@ const Home = () => {
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
-                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" />
-                </div>
-              </div>
-
-              <div className="p-home__skills__inner__content__items">
-                <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
                 </div>
               </div>
@@ -247,6 +242,12 @@ const Home = () => {
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
+                </div>
+              </div>
+
+              <div className="p-home__skills__inner__content__items">
+                <div className="p-home__skills__inner__content__items__img-cont">
+                  <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
                 </div>
               </div>
 
@@ -310,6 +311,8 @@ const Home = () => {
             <h2 className="c-heading">
               <p className="c-heading__txt">CONTACT</p>
             </h2>
+
+            <Form />
 
           </div>
         </div>
