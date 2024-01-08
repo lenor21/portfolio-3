@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 import Loader from '../../components/loader/Loader';
 import { useState, useEffect } from 'react';
 
@@ -22,6 +23,7 @@ const RootLayout = () => {
     <div>
       <Header />
       <Outlet />
+      <Footer />
     </div>
   );
 };
