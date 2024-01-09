@@ -1,4 +1,12 @@
-import { FaRegEnvelope, FaGithub, FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { 
+    FaRegEnvelope, 
+    FaGithub, 
+    FaFacebook, 
+    FaInstagram, 
+    FaLinkedin, 
+    FaXTwitter, 
+    FaEnvelope
+} from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -57,6 +65,9 @@ const Footer = () => {
                         </a>
                         <a href="#" className="c-footer__inner__right__socials__anchor">
                             <FaLinkedin />
+                        </a>
+                        <a href="#" className="c-footer__inner__right__socials__anchor">
+                            <FaEnvelope />
                         </a>
                     </div>
                     

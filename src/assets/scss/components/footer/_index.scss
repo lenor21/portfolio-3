@@ -60,7 +60,7 @@
             &__links {
                 display: flex;
                 flex-direction: column;
-                row-gap: 3rem;
+                row-gap: 2.5rem;
 
                 &__anchor {
                     text-decoration: none;
@@ -68,6 +68,30 @@
                     color: #333;
                     font-weight: normal;
                     font-size: 1.8rem;
+                    position: relative;
+                    width: max-content;
+                    line-height: normal;
+                    transition: 0.3s;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 0.2rem;
+                        width: 0;
+                        background: #333;
+                        bottom: -0.5rem;
+                        left: 0;
+                        transition: 0.3s;
+                    }
+
+                    &:hover {
+                        color: #84A98B;
+
+                        &::after {
+                            width: 100%;
+                            background: #84A98B;
+                        }
+                    }
                 }
             }
 
@@ -85,6 +109,12 @@
                     display: block;
                     color: #333;
                     font-size: 4rem;
+                    cursor: pointer;
+                    transition: 0.3s;
+
+                    &:hover {
+                        color: #84A98B;
+                    }
                 }
             }
         }

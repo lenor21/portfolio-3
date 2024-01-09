@@ -3,7 +3,7 @@
         text-decoration: none;
         font-size: 1.6rem;
         font-weight: 500;
-        border: 0.1rem solid #354F52;
+        border: 0.2rem solid #354F52;
         color: #fff;
         background: #354F52;
         height: 5rem;
@@ -15,6 +15,7 @@
         justify-content: center;
         align-items: center;
         column-gap: 1rem;
+        transition: 0.3s;
 
         @include sp {
             &.is-full {
@@ -30,6 +31,12 @@
             @include tablet {
                 font-size: 1.8rem;
             }
+        }
+
+        &:hover {
+            background: #fff;
+            color: #333;
+            border: 0.2rem solid #333;
         }
     }
 
