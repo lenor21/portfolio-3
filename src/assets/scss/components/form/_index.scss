@@ -2,6 +2,10 @@
     font-size: 1.8rem;
     font-family: $poppins;
     margin-top: 10rem;
+
+    @include sp {
+        margin-top: 5rem;
+    }
     
     &__wrap {
         display: flex;
@@ -11,6 +15,11 @@
         padding: 10rem 15rem;
         border-radius: 2rem;
         border: 0.2rem solid #333;
+
+        @include sp {
+            padding: 3rem 2rem;
+            row-gap: 3rem;
+        }
     }
 
     &__item {
@@ -18,9 +27,17 @@
         flex-direction: column;
         row-gap: 2rem;
 
+        @include sp {
+            row-gap: 1rem;
+        }
+
         &__label {
             font-size: 2rem;
             font-weight: bold;
+
+            @include sp {
+                font-size: 1.6rem;
+            }
         }
 
         &__input {
@@ -29,6 +46,10 @@
             border-radius: 1rem;
             max-width: 100%;
             font-size: 2rem;
+
+            @include sp {
+                font-size: 1.6rem;
+            }
             
             &::placeholder {
                 color: #ddd;
@@ -43,6 +64,11 @@
             height: 30rem;
             font-size: 2rem;
 
+            @include sp {
+                font-size: 1.6rem;
+                height: 20rem;
+            }
+
             &::placeholder {
                 color: #ddd;
             }
@@ -53,5 +79,9 @@
         display: grid;
         place-items: center;
         margin-top: 4rem;
+
+        @include sp {
+            margin-top: 2rem;
+        }
     }
 }

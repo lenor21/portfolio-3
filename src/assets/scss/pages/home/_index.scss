@@ -165,10 +165,19 @@
         justify-content: center;
         column-gap: 10rem;
 
+        @include sp {
+          grid-template-columns: 1fr;
+        }
+
         &__slide {
           height: 60rem;
           width: 40rem;
           box-shadow: 2rem 2rem 0 rgba($color: #333, $alpha: 1.0);
+
+          @include sp {
+            width: 30rem;
+            height: 50rem;
+          }
 
           &__container {
             height: 100%;
@@ -222,6 +231,10 @@
     position: relative;
     overflow: hidden;
 
+    @include sp {
+      padding: 10rem 0;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -258,6 +271,13 @@
         row-gap: 3rem;
         margin-top: 10rem;
 
+        @include sp {
+          margin-top: 5rem;
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 1.5rem;
+          column-gap: 1.5rem;
+        }
+
         &__items {
           width: 20rem;
           height: 20rem;
@@ -267,9 +287,19 @@
           box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.1);
           border-radius: 1rem;
 
+          @include sp {
+            width: 15rem;
+            height: 15rem;
+          }
+
           &__img-cont {
             width: 15rem;
             height: 15rem;
+
+            @include sp {
+              width: 10rem;
+              height: 10rem;
+            }
 
             &__img {
               width: 100%;
@@ -305,6 +335,10 @@
     position: relative;
     overflow: hidden;
 
+    @include sp {
+      padding: 10rem 0;
+    }
+
     &__inner {
       position: relative;
       z-index: 2;
@@ -314,6 +348,10 @@
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
+
+        @include sp {
+          margin-top: 5rem;
+        }
       }
     }
   }
@@ -321,6 +359,10 @@
   &__contact {
     padding: 15rem 0 15rem;
     background: #f2f2f2;
+
+    @include sp {
+      padding: 10rem 0;
+    }
   }
 }
 

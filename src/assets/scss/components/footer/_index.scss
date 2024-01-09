@@ -11,6 +11,10 @@
         border-bottom: 0.1rem solid #333;
         padding-bottom: 5rem;
 
+        @include sp {
+            flex-direction: column;
+        }
+
         &__left {
             &__logo {
                 width: max-content;
@@ -43,8 +47,6 @@
                     }
                 }
             }
-
-            
         }
 
         &__right {
@@ -55,6 +57,10 @@
             &__wrap {
                 display: flex;
                 column-gap: 10rem;
+
+                @include sp {
+                    flex-direction: column;
+                }
             }
 
             &__links {

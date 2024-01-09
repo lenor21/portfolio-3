@@ -8,6 +8,10 @@
         line-height: normal;
         font-weight: bold;
         letter-spacing: 0.05em;
+
+        @include sp {
+            font-size: 4rem;
+        }
     }
 
     &::after {

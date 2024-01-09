@@ -4,6 +4,10 @@
     font-family: $poppins;
     background: #c5d8c533;
 
+    @include sp {
+        font-size: 1.6rem;
+    }
+
     &__summary {
         display: block;
         position: relative;
@@ -11,6 +15,11 @@
         padding: 3rem 6rem 3rem 3rem;
         font-size: 2.4rem;
         font-weight: bold;
+
+        @include sp {
+            font-size: 1.8rem;
+            padding: 3rem 4rem 3rem 2rem;
+        }
 
         &::-webkit-details-marker {
             display: none;
@@ -33,6 +42,12 @@
 
     &__content {
         padding: 0 3rem 3rem;
+        font-size: 2rem;
+        line-height: normal;
+
+        @include sp {
+            font-size: 1.8rem;
+        }
     }
 
     &[open] &__summary::after {
