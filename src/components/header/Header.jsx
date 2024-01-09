@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { FaBars, FaXmark, FaRegEnvelope } from "react-icons/fa6";
+import { FaRegEnvelope } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 const Header = () => {
