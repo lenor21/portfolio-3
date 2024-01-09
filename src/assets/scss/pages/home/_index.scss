@@ -219,8 +219,37 @@
   &__skills {
     padding: 15rem 0 15rem;
     background: #fff;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("/images/common/pc/blob-02.svg");
+      height: 70rem;
+      width: 70rem;
+      bottom: 0;
+      left: -25rem;
+      z-index: 1;
+      opacity: 0.3;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: url("/images/common/pc/blob-01.svg");
+      height: 70rem;
+      width: 70rem;
+      top: 0;
+      right: -25rem;
+      z-index: 1;
+      opacity: 0.3;
+    }
 
     &__inner {
+      position: relative;
+      z-index: 2;
+
       &__content {
         display: grid;
         grid-template-columns: repeat(4, auto);
@@ -234,7 +263,9 @@
           height: 20rem;
           display: grid;
           place-items: center;
-          border: 0.3rem solid #333;
+          background: #fff;
+          box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.1);
+          border-radius: 1rem;
 
           &__img-cont {
             width: 15rem;
@@ -271,8 +302,13 @@
 
   &__faq {
     padding: 15rem 0 15rem;
+    position: relative;
+    overflow: hidden;
 
     &__inner {
+      position: relative;
+      z-index: 2;
+
       &__accordion {
         margin-top: 10rem;
         display: flex;

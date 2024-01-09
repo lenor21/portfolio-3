@@ -1,4 +1,4 @@
-
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Form = () => {
   return (
@@ -31,7 +31,7 @@ const Form = () => {
         </div>
         
         <div className="c-form__btn-cont">
-            <button className="c-button__submit" type="submit">Submit</button>
+            <button className="c-button__submit" type="submit">Submit <FaArrowRightLong className="c-button__submit__icon" /></button>
         </div>
     </form>
   );
