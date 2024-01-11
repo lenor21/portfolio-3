@@ -24,7 +24,7 @@ const Home = () => {
         {...item}
       />
     )
-  })
+  });
 
   useEffect(() => {
     if (isInView) {
@@ -267,11 +267,10 @@ const Home = () => {
 
             <div className="p-home__projects__inner__items">
               <swiper-container
-                slides-per-view="3"
+                slides-per-view={window.innerWidth > 768 ? "3" : "1"}
                 space-between="30"
                 loop="true"
                 navigation="true" 
-                pagination="true" 
                 className="p-home__projects__inner__items__slide"
               >
                 {cards}

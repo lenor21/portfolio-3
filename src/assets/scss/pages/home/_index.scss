@@ -157,6 +157,10 @@
     padding: 15rem 0 15rem;
     background: #f2f2f2;
 
+    @include sp {
+      padding: 10rem 0;
+    }
+
     &__inner {
       &__details {
         display: grid;
@@ -165,8 +169,14 @@
         justify-content: center;
         column-gap: 10rem;
 
+        @include tablet {
+          column-gap: 0;
+        }
+
         @include sp {
           grid-template-columns: 1fr;
+          row-gap: 3rem;
+          margin-top: 5rem;
         }
 
         &__slide {
@@ -174,9 +184,17 @@
           width: 40rem;
           box-shadow: 2rem 2rem 0 rgba($color: #333, $alpha: 1.0);
 
+          @include tablet {
+            width: 35rem;
+            height: auto;
+          }
+
           @include sp {
-            width: 30rem;
-            height: 50rem;
+            width: 100%;
+            height: 40.5rem;
+            overflow: hidden;
+            box-shadow: none;
+            border: 0.3rem solid #333;
           }
 
           &__container {
@@ -216,8 +234,22 @@
             display: grid;
             grid-template-columns: 15rem 1fr;
 
+            @include tablet {
+              grid-template-columns: 12rem 1fr;
+            }
+
             &__ttl {
               font-weight: bold;
+
+              @include tablet {
+                font-size: 1.6rem;
+              }
+            }
+
+            &__txt {
+              @include tablet {
+                font-size: 1.6rem;
+              }
             }
           }
         }
@@ -270,6 +302,11 @@
         column-gap: 3rem;
         row-gap: 3rem;
         margin-top: 10rem;
+        place-items: center;
+
+        @include tablet {
+          grid-template-columns: repeat(3, 1fr);
+        }
 
         @include sp {
           margin-top: 5rem;
@@ -315,6 +352,10 @@
   &__projects {
     background: #c5d8c533;
     padding: 15rem 0 15rem;
+
+    @include sp {
+      padding: 10rem 0;
+    }
 
     &__inner {
       &__items {
