@@ -311,6 +311,13 @@ const Home = () => {
               <p className="c-heading__txt">CONTACT</p>
             </h2>
 
+            <div className="p-home__contact__inner__tel">
+              <a href="tel:09357249128" className="p-home__contact__inner__tel__info">
+                <span className="p-home__contact__inner__tel__info__txt">Call Me</span>
+                <span className="p-home__contact__inner__tel__info__num">+639357249128</span>
+              </a>
+            </div>
+
             <Form />
 
           </div>

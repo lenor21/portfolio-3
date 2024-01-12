@@ -4,6 +4,36 @@
     font-size: 1.8rem;
     color: #333;
     font-family: $poppins;
+    position: relative;
+
+    @include sp {
+        padding: 10rem 0 3rem;
+    }
+
+    &__top {
+        position: absolute;
+        display: grid;
+        place-items: center;
+        top: -4rem;
+        right: 5rem;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        background: #333;
+        border: 0.3rem solid #333;
+        font-size: 3rem;
+        color: #fff;
+        transition: 0.3s;
+
+        @include sp {
+            right: 2rem;
+        }
+
+        &:hover {
+            background: #fff;
+            color: #333;
+        }
+    }
 
     &__inner {
         display: flex;
@@ -13,6 +43,8 @@
 
         @include sp {
             flex-direction: column;
+            row-gap: 4rem;
+            padding-bottom: 3rem;
         }
 
         &__left {
@@ -54,12 +86,17 @@
             flex-direction: column;
             row-gap: 7rem;
 
+            @include sp {
+                row-gap: 3rem;
+            }
+
             &__wrap {
                 display: flex;
                 column-gap: 10rem;
 
                 @include sp {
                     flex-direction: column;
+                    row-gap: 4rem;
                 }
             }
 
@@ -103,6 +140,12 @@
 
             &__map {
                 width: max-content;
+                width: 25rem;
+                height: 25rem;
+
+                @include sp {
+                    width: 100%;
+                }
             }
 
             &__socials {
@@ -135,5 +178,9 @@
         font-weight: normal;
         text-align: center;
         margin-top: 5rem;
+
+        @include sp {
+            margin-top: 3rem;
+        }
     }
 }
