@@ -70,27 +70,27 @@ const Header = () => {
           <nav className={`c-nav u-pc-only`}>
             <ul className='c-nav__links'>
               <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
+                <a href='#about' className='c-nav__links__item__anchor'>
                   About Me
                 </a>
               </li>
               <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
+                <a href='#skills' className='c-nav__links__item__anchor'>
                   Skills
                 </a>
               </li>
               <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
+                <a href='#projects' className='c-nav__links__item__anchor'>
                   Projects
                 </a>
               </li>
               <li className='c-nav__links__item'>
-                <a href='#' className='c-nav__links__item__anchor'>
+                <a href='#faq' className='c-nav__links__item__anchor'>
                   FAQ
                 </a>
               </li>
             </ul>
-            <a href='#' className='c-button__primary'>
+            <a href='#contact' className='c-button__primary'>
               Contact me
               <FaRegEnvelope className="c-button__primary__icon" />
             </a>
@@ -125,27 +125,27 @@ const Header = () => {
         >
           <ul className='c-nav__links'>
             <li className='c-nav__links__item'>
-              <a href='#' className='c-nav__links__item__anchor'>
+              <a href='#about' className='c-nav__links__item__anchor'>
                 About Me
               </a>
             </li>
             <li className='c-nav__links__item'>
-              <a href='#' className='c-nav__links__item__anchor'>
+              <a href='#skills' className='c-nav__links__item__anchor'>
                 Skills
               </a>
             </li>
             <li className='c-nav__links__item'>
-              <a href='#' className='c-nav__links__item__anchor'>
+              <a href='#projects' className='c-nav__links__item__anchor'>
                 Projects
               </a>
             </li>
             <li className='c-nav__links__item'>
-              <a href='#' className='c-nav__links__item__anchor'>
+              <a href='#faq' className='c-nav__links__item__anchor'>
                 FAQ
               </a>
             </li>
           </ul>
-          <a href='#' className='c-button__primary'>
+          <a href='#contact' className='c-button__primary'>
             Contact me
             <FaRegEnvelope className="c-button__primary__icon" />
           </a>

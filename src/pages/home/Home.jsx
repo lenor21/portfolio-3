@@ -84,7 +84,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-home__about">
+      <section id="about" className="p-home__about">
         <div className="container">
           <div className="p-home__about__inner">
             
@@ -145,7 +145,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-home__skills">
+      <section id="skills" className="p-home__skills">
         <div className="container">
           <div className="p-home__skills__inner">
 
@@ -257,7 +257,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-home__projects">
+      <section id="projects" className="p-home__projects">
         <div className="container">
           <div className="p-home__projects__inner">
 
@@ -281,7 +281,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-home__faq">
+      <section id="faq" className="p-home__faq">
         <div className="container">
           <div className="p-home__faq__inner">
 
@@ -303,7 +303,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="p-home__contact">
+      <section id="contact" className="p-home__contact">
         <div className="container">
           <div className="p-home__contact__inner">
 
