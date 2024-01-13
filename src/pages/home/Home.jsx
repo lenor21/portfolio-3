@@ -136,6 +136,11 @@ const Home = () => {
                     <span className="p-home__about__inner__details__info__item__ttl">Location</span>
                     <span className="p-home__about__inner__details__info__item__txt">Macabebe, Pampanga, Philippines</span>
                   </p>
+
+                  <p className="p-home__about__inner__details__info__item">
+                    <span className="p-home__about__inner__details__info__item__ttl">Language</span>
+                    <span className="p-home__about__inner__details__info__item__txt">English, Filipino, Kapampangan</span>
+                  </p>
                 </div>
 
               </div>
@@ -159,96 +164,112 @@ const Home = () => {
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">HTML</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">CSS</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">JAVASCRIPT</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">PHP</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">SASS</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">TAILWIND CSS</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">BOOTSTRAP</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">REACT JS</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">EXPRESS JS</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">NODE JS</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">MONGODB</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">MYSQL</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">GIT</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">NEXT JS</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">REDUX</div>
               </div>
 
               <div className="p-home__skills__inner__content__items">
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
                 </div>
+                <div className="p-home__skills__inner__content__items__hover">WORDPRESS</div>
               </div>
 
             </div>

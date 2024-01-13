@@ -182,7 +182,7 @@
         &__slide {
           height: 60rem;
           width: 40rem;
-          box-shadow: 2rem 2rem 0 rgba($color: #333, $alpha: 1.0);
+          box-shadow: 2rem 2rem 0 rgba($color: #354F52, $alpha: 1.0);
 
           @include tablet {
             width: 35rem;
@@ -223,7 +223,6 @@
             display: flex;
             flex-direction: column;
             row-gap: 2rem;
-            background: #C5D8C5;
             border-radius: 2rem;
             padding: 2rem;
           }
@@ -233,6 +232,8 @@
             font-family: $poppins;
             display: grid;
             grid-template-columns: 15rem 1fr;
+            padding-bottom: 2rem;
+            border-bottom: 0.2rem solid #84A98B;
 
             @include tablet {
               grid-template-columns: 12rem 1fr;
@@ -323,6 +324,9 @@
           background: #fff;
           box-shadow: 0 1rem 2rem rgba($color: #000000, $alpha: 0.1);
           border-radius: 1rem;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
 
           @include sp {
             width: 15rem;
@@ -342,6 +346,31 @@
               width: 100%;
               height: 100%;
               object-fit: contain;
+            }
+          }
+
+          &__hover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            display: grid;
+            place-items: center;
+            color: #fff;
+            font-family: $poppins;
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+            opacity: 0.7;
+            opacity: 0;
+            transition: 0.3s;
+          }
+
+          &:hover & {
+            &__hover {
+              opacity: 0.7;
             }
           }
         }

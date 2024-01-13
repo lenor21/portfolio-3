@@ -96,16 +96,6 @@ const Header = () => {
             </a>
           </nav>
 
-          
-
-          {/* <button onClick={handleMenu} className="c-header__inner__menu">
-            { menu 
-              ?  <FaBars className="c-header__inner__menu__icon" />
-              :  <FaXmark className="c-header__inner__menu__icon" />
-            }
-            
-          </button> */}
-
           <button onClick={handleMenu} className={`hamburger hamburger--squeeze ${!menu ? "is-active" : ""} u-sp-only`} type="button">
             <span className="hamburger-box">
               <span className="hamburger-inner"></span>

@@ -52,6 +52,29 @@
         font-family: $poppins;
         font-size: 1.6rem;
         color: #333;
+        transition: 0.3s;
+        position: relative;
+        display: block;
+
+        &::before {
+          content: "";
+          position: absolute;
+          height: 0.2rem;
+          width: 0;
+          background: #333;
+          bottom: -0.5rem;
+          left: 0;
+          transition: 0.3s;
+        }
+
+        &:hover {
+          color: #84A98B;
+
+          &::before {
+            background: #84A98B;
+            width: 100%;
+          }
+        }
       }
     }
   }
