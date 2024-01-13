@@ -9,4 +9,9 @@
     top: 0;
     left: 0;
     z-index: 1001;
+
+    &__icon {
+        height: 5rem;
+        width: 5rem;
+    }
 }
