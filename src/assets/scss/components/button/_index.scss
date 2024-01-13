@@ -74,6 +74,10 @@
             }
         }
 
+        &.is-disabled {
+            pointer-events: none;
+        }
+
         &:hover {
             color: #C5D8C5;
             background: #fff;

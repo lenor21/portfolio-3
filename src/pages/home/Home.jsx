@@ -71,7 +71,7 @@ const Home = () => {
                   Download CV
                   <FaDownload className="c-button__secondary__icon" />
                 </a>
-                <a href='#' className='c-button__primary is-full'>
+                <a href='#contact' className='c-button__primary is-full'>
                   Contact Me
                   <FaRegEnvelope className="c-button__primary__icon" />
                 </a>
@@ -296,6 +296,21 @@ const Home = () => {
               >
                 {cards}
               </swiper-container>
+            </div>
+
+            <div className="p-home__projects__inner__links">
+              <a href="https://github.com/lenor21" target="_blank" className="p-home__projects__inner__links__link" rel="noreferrer">
+                <div className="p-home__projects__inner__links__link__img-cont">
+                  <img className="p-home__projects__inner__links__link__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
+                </div>
+                <p className="p-home__projects__inner__links__link__txt">View all my repositories</p>
+              </a>
+              <a href="https://codepen.io/Ronel-De-jesus/pens/" target="_blank" className="p-home__projects__inner__links__link" rel="noreferrer">
+                <div className="p-home__projects__inner__links__link__img-cont">
+                  <img className="p-home__projects__inner__links__link__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-plain.svg" />
+                </div>
+                <p className="p-home__projects__inner__links__link__txt">View all my works on Codepen</p>
+              </a>
             </div>
 
           </div>

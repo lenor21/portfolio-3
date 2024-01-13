@@ -1,5 +1,5 @@
 import { register } from 'swiper/element/bundle';
-import { FaRegEnvelope, FaDownload  } from "react-icons/fa6";
+import { FaGithub, FaLink  } from "react-icons/fa6";
 
 register();
 
@@ -14,13 +14,13 @@ const Card = (props) => {
                 <p className="c-card__link__details__ttl">{props.title}</p>
                 <p className="c-card__link__details__desc">{props.description}</p>
                 <div className="c-card__link__details__btns">
-                  <a href='#' className='c-button__secondary c-card__link__details__btns__btn is-full'>
-                    Download CV
-                    <FaDownload className="c-button__secondary__icon" />
+                  <a href={props.link} target="_blank" className={`c-button__secondary ${props.link === "" ? "is-disabled" : ""} c-card__link__details__btns__btn is-full`} rel="noreferrer">
+                    <FaLink className="c-button__secondary__icon" />
+                    {props.link === "" ? "Not yet deployed" : "Visit here"}
                   </a>
-                  <a href='#' className='c-button__primary c-card__link__details__btns__btn is-full'>
-                    Contact Me
-                    <FaRegEnvelope className="c-button__primary__icon" />
+                  <a href={props.repository} target="_blank" className='c-button__primary c-card__link__details__btns__btn is-full' rel="noreferrer">
+                    <FaGithub className="c-button__primary__icon" />
+                    Github Repository
                   </a>
                 </div>
             </div>
