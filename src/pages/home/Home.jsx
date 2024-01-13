@@ -8,7 +8,10 @@ import Card from '../../components/card/Card';
 import Faq from '../../assets/data/Faq';
 import Accordion from '../../components/accordion/Accordion';
 import Form from '../../components/form/Form';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
 
+AOS.init();
 register();
 
 const Home = () => {
@@ -44,28 +47,39 @@ const Home = () => {
       typed1.destroy();
     }
   }, []);
-  
-  const variants = {
-    visible: {opacity: 1, transition: {duration: 2, delay: 0.5}}, 
-    hidden: {opacity: 0}
+
+  const sliderVariants = {
+    initial: {
+      x: 0,
+    },
+    animate: {
+      x: "-220%",
+      opacity: 0.5,
+      transition: {
+        repeat: Infinity,
+        repeatType: "mirror",
+        duration: 20,
+      },
+    },
+
   }
 
   return (
-    <div className='p-home' ref={ref}>
+    <div className='p-home'>
 
       <section className='p-home__hero'>
         <div className='container'>
           <div className='p-home__hero__inner'>
             <div className='p-home__hero__inner__details'>
               <p className='p-home__hero__inner__details__sml'><span ref={el1} /></p>
-              <motion.h1 
+              <h1 
                 className='p-home__hero__inner__details__head'
-                variants={variants}
-                initial="hidden"
-                animate={mainControls}
+                data-aos="fade-in"
+                data-aos-delay="5000"
+                data-aos-duration="1000"
               >
                 I’m <span className="p-home__hero__inner__details__head__gradient">Ronel De Jesus</span> <br /> A Software & Web <span className="p-home__hero__inner__details__head__border">DEVELOPER</span>
-              </motion.h1>
+              </h1>
               <div className='p-home__hero__inner__details__btn-cont'>
                 <a href='#' className='c-button__secondary is-full'>
                   Download CV
@@ -88,7 +102,11 @@ const Home = () => {
         <div className="container">
           <div className="p-home__about__inner">
             
-            <h2 className="c-heading">
+            <h2 
+              className="c-heading"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <p className="c-heading__txt">ABOUT ME</p>
             </h2>
 
@@ -148,6 +166,13 @@ const Home = () => {
 
           </div>
         </div>
+
+        <motion.div 
+          className="p-home__about__sliding" 
+          variants={sliderVariants} 
+          initial="initial" 
+          animate="animate"
+        >ABOUT ME</motion.div>
       </section>
 
       <section id="skills" className="p-home__skills">
@@ -315,6 +340,12 @@ const Home = () => {
 
           </div>
         </div>
+        <motion.div 
+          className="p-home__projects__sliding" 
+          variants={sliderVariants} 
+          initial="initial" 
+          animate="animate"
+        >VIEW MY PROJECTS</motion.div>
       </section>
 
       <section id="faq" className="p-home__faq">

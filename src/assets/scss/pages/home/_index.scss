@@ -154,14 +154,19 @@
   }
 
   &__about {
-    padding: 15rem 0 15rem;
+    padding: 15rem 0 20rem;
     background: #f2f2f2;
+    position: relative;
+    overflow: hidden;
 
     @include sp {
       padding: 10rem 0;
     }
 
     &__inner {
+      position: relative;
+      z-index: 2;
+
       &__details {
         display: grid;
         grid-template-columns: 40rem auto;
@@ -255,6 +260,19 @@
           }
         }
       }
+    }
+
+    &__sliding {
+      position: absolute;
+      bottom: -10rem;
+      color: #ddd;
+      font-size: 50vh;
+      font-family: $poppins;
+      font-weight: bold;
+      z-index: 1;
+      white-space: nowrap;
+      width: 50%;
+      opacity: 0.5;
     }
   }
 
@@ -380,13 +398,18 @@
 
   &__projects {
     background: #c5d8c533;
-    padding: 15rem 0 15rem;
+    padding: 15rem 0 20rem;
+    position: relative;
+    overflow: hidden;
 
     @include sp {
       padding: 10rem 0;
     }
 
     &__inner {
+      position: relative;
+      z-index: 2;
+      
       &__items {
         margin-top: 10rem;
         height: auto;
@@ -447,6 +470,19 @@
         }
       }
     }
+
+  &__sliding {
+    position: absolute;
+    bottom: -10rem;
+    color: #ddd;
+    font-size: 50vh;
+    font-family: $poppins;
+    font-weight: bold;
+    z-index: 1;
+    white-space: nowrap;
+    width: 50%;
+    opacity: 0.5;
+  }
   }
 
   &__faq {
