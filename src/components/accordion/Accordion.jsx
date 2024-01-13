@@ -1,10 +1,24 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
+const Accordion = (props) => {
+    useEffect(() => {
+        AOS.init({
+            offset: 320,
+            once: false,
+            mirror: false,
+        });
+    }, []);
 
-const Accordion = () => {
     return (
-        <details className="c-accordion">
-            <summary className="c-accordion__summary">Click to open</summary>
-            <p className="c-accordion__content">Lorem ipsum dolor, sit amet consectetur adipisicing elit. A recusandae est suscipit quibusdam molestias libero vero corrupti, incidunt labore hic eveniet et perferendis nisi veniam excepturi blanditiis? Nobis, quaerat ullam.</p>
+        <details 
+            className="c-accordion"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+        >
+            <summary className="c-accordion__summary">{props.question}</summary>
+            <p className="c-accordion__content">{props.answer}</p>
         </details>
     );
 };

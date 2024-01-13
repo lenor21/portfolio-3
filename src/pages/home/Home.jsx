@@ -9,9 +9,8 @@ import Faq from '../../assets/data/Faq';
 import Accordion from '../../components/accordion/Accordion';
 import Form from '../../components/form/Form';
 import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import 'aos/dist/aos.css';
 
-AOS.init();
 register();
 
 const Home = () => {
@@ -48,6 +47,14 @@ const Home = () => {
     }
   }, []);
 
+  useEffect(() => {
+   AOS.init({
+    offset: 320,
+    once: false,
+    mirror: false,
+   });
+  }, []);
+
   const sliderVariants = {
     initial: {
       x: 0,
@@ -74,24 +81,41 @@ const Home = () => {
               <p className='p-home__hero__inner__details__sml'><span ref={el1} /></p>
               <h1 
                 className='p-home__hero__inner__details__head'
-                data-aos="fade-in"
-                data-aos-delay="5000"
+                data-aos="fade-right"
+                data-aos-delay="10000"
                 data-aos-duration="1000"
               >
                 I’m <span className="p-home__hero__inner__details__head__gradient">Ronel De Jesus</span> <br /> A Software & Web <span className="p-home__hero__inner__details__head__border">DEVELOPER</span>
               </h1>
               <div className='p-home__hero__inner__details__btn-cont'>
-                <a href='#' className='c-button__secondary is-full'>
+                <a 
+                  href='#' 
+                  className='c-button__secondary is-full'
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  data-aos-duration="1000"
+                >
                   Download CV
                   <FaDownload className="c-button__secondary__icon" />
                 </a>
-                <a href='#contact' className='c-button__primary is-full'>
+                <a 
+                  href='#contact' 
+                  className='c-button__primary is-full'
+                  data-aos="fade-up"
+                  data-aos-delay="1000"
+                  data-aos-duration="1000"
+                >
                   Contact Me
                   <FaRegEnvelope className="c-button__primary__icon" />
                 </a>
               </div>
             </div>
-            <div className='p-home__hero__inner__img-cont'>
+            <div 
+              className='p-home__hero__inner__img-cont'
+              data-aos="fade-left"
+              data-aos-delay="1000"
+              data-aos-duration="1000"
+            >
               <img src='/images/pages/home/pc/hero.svg' alt='hero-img' className='p-home__hero__inner__img-cont__img' />
             </div>
           </div>
@@ -111,7 +135,11 @@ const Home = () => {
             </h2>
 
             <div className="p-home__about__inner__details">
-              <div className="p-home__about__inner__details__slide">
+              <div 
+                className="p-home__about__inner__details__slide"
+                data-aos="fade-right"
+                data-aos-duration="1000"
+              >
                 <swiper-container
                   slides-per-view="1"
                   mousewheel-force-to-axis="true"
@@ -132,7 +160,11 @@ const Home = () => {
                   ...
                 </swiper-container>
               </div>
-              <div className="p-home__about__inner__details__info">
+              <div 
+                className="p-home__about__inner__details__info"
+                data-aos="fade-left"
+                data-aos-duration="1000"
+              >
 
                 <div className="p-home__about__inner__details__info__wrap">
                   <p className="p-home__about__inner__details__info__item">
@@ -179,118 +211,202 @@ const Home = () => {
         <div className="container">
           <div className="p-home__skills__inner">
 
-            <h2 className="c-heading">
+            <h2 
+              className="c-heading"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <p className="c-heading__txt">SKILLS</p>
             </h2>
 
             <div className="p-home__skills__inner__content">
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">HTML</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">CSS</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="250"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">JAVASCRIPT</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="350"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">PHP</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">SASS</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">TAILWIND CSS</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="250"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">BOOTSTRAP</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="350"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">REACT JS</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">EXPRESS JS</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">NODE JS</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="250"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">MONGODB</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="350"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">MYSQL</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="50"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">GIT</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="150"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">NEXT JS</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="250"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
                 </div>
                 <div className="p-home__skills__inner__content__items__hover">REDUX</div>
               </div>
 
-              <div className="p-home__skills__inner__content__items">
+              <div 
+                className="p-home__skills__inner__content__items"
+                data-aos="fade-up"
+                data-aos-delay="350"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__skills__inner__content__items__img-cont">
                   <img className="p-home__skills__inner__content__items__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" />
                 </div>
@@ -307,11 +423,19 @@ const Home = () => {
         <div className="container">
           <div className="p-home__projects__inner">
 
-            <h2 className="c-heading">
+            <h2 
+              className="c-heading"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <p className="c-heading__txt">PROJECTS</p>
             </h2>
 
-            <div className="p-home__projects__inner__items">
+            <div 
+              className="p-home__projects__inner__items"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <swiper-container
                 slides-per-view={window.innerWidth > 768 ? "3" : "1"}
                 space-between="30"
@@ -324,13 +448,27 @@ const Home = () => {
             </div>
 
             <div className="p-home__projects__inner__links">
-              <a href="https://github.com/lenor21" target="_blank" className="p-home__projects__inner__links__link" rel="noreferrer">
+              <a 
+                href="https://github.com/lenor21" 
+                target="_blank" 
+                className="p-home__projects__inner__links__link" 
+                rel="noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__projects__inner__links__link__img-cont">
                   <img className="p-home__projects__inner__links__link__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
                 </div>
                 <p className="p-home__projects__inner__links__link__txt">View all my repositories</p>
               </a>
-              <a href="https://codepen.io/Ronel-De-jesus/pens/" target="_blank" className="p-home__projects__inner__links__link" rel="noreferrer">
+              <a 
+                href="https://codepen.io/Ronel-De-jesus/pens/" 
+                target="_blank" 
+                className="p-home__projects__inner__links__link" 
+                rel="noreferrer"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+              >
                 <div className="p-home__projects__inner__links__link__img-cont">
                   <img className="p-home__projects__inner__links__link__img-cont__img" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codepen/codepen-plain.svg" />
                 </div>
@@ -352,7 +490,11 @@ const Home = () => {
         <div className="container">
           <div className="p-home__faq__inner">
 
-            <h2 className="c-heading">
+            <h2 
+              className="c-heading"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <p className="c-heading__txt">FAQ</p>
             </h2>
 
@@ -374,11 +516,19 @@ const Home = () => {
         <div className="container">
           <div className="p-home__contact__inner">
 
-            <h2 className="c-heading">
+            <h2 
+              className="c-heading"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
               <p className="c-heading__txt">CONTACT</p>
             </h2>
 
-            <div className="p-home__contact__inner__tel">
+            <div 
+              className="p-home__contact__inner__tel"
+              data-aos="fade-right"
+              data-aos-duration="1000"
+            >
               <a href="tel:09357249128" className="p-home__contact__inner__tel__info">
                 <span className="p-home__contact__inner__tel__info__txt">TAP TO CALL ME</span>
                 <span className="p-home__contact__inner__tel__info__num">+639357249128</span>
