@@ -187,7 +187,7 @@
         &__slide {
           height: 60rem;
           width: 40rem;
-          box-shadow: 2rem 2rem 0 rgba($color: #354F52, $alpha: 1.0);
+          box-shadow: 2rem 2rem 0 rgba($color: #354f52, $alpha: 1);
 
           @include tablet {
             width: 35rem;
@@ -238,7 +238,7 @@
             display: grid;
             grid-template-columns: 15rem 1fr;
             padding-bottom: 2rem;
-            border-bottom: 0.2rem solid #84A98B;
+            border-bottom: 0.2rem solid #84a98b;
 
             @include tablet {
               grid-template-columns: 12rem 1fr;
@@ -287,9 +287,9 @@
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
-      background: url("/images/common/pc/blob-02.svg");
+      background: url('/images/common/pc/blob-02.svg');
       height: 70rem;
       width: 70rem;
       bottom: 0;
@@ -299,9 +299,9 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
-      background: url("/images/common/pc/blob-01.svg");
+      background: url('/images/common/pc/blob-01.svg');
       height: 70rem;
       width: 70rem;
       top: 0;
@@ -409,12 +409,12 @@
     &__inner {
       position: relative;
       z-index: 2;
-      
+
       &__items {
         margin-top: 10rem;
         height: auto;
         width: 100%;
-        
+
         &__slide {
           height: 100%;
           width: 100%;
@@ -465,24 +465,24 @@
           }
 
           &:hover {
-            background: #C5D8C5;
+            background: #c5d8c5;
           }
         }
       }
     }
 
-  &__sliding {
-    position: absolute;
-    bottom: -10rem;
-    color: #ddd;
-    font-size: 50vh;
-    font-family: $poppins;
-    font-weight: bold;
-    z-index: 1;
-    white-space: nowrap;
-    width: 50%;
-    opacity: 0.5;
-  }
+    &__sliding {
+      position: absolute;
+      bottom: -10rem;
+      color: #ddd;
+      font-size: 50vh;
+      font-family: $poppins;
+      font-weight: bold;
+      z-index: 1;
+      white-space: nowrap;
+      width: 50%;
+      opacity: 0.5;
+    }
   }
 
   &__faq {
@@ -524,7 +524,7 @@
         font-size: 2rem;
         font-family: $poppins;
         margin: 10rem auto 0;
-        background: url("/images/common/pc/call-me.svg") no-repeat center center/contain;
+        background: url('/images/common/pc/call-me.svg') no-repeat center center/contain;
         height: 50rem;
         width: 50rem;
 
@@ -578,7 +578,7 @@
 }
 
 @keyframes gradient {
-  0%{
+  0% {
     background-position: 0% 50%;
   }
 
