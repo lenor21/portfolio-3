@@ -49,7 +49,7 @@ const Home = () => {
 
   useEffect(() => {
    AOS.init({
-    offset: 320,
+    offset: 220,
     once: false,
     mirror: false,
    });
