@@ -10,6 +10,7 @@ import Accordion from '../../components/accordion/Accordion';
 import Form from '../../components/form/Form';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import resume from '../../assets/data/cv/resume.pdf';
 
 register();
 
@@ -79,7 +80,14 @@ const Home = () => {
                 <span className='p-home__hero__inner__details__head__border'>DEVELOPER</span>
               </h1>
               <div className='p-home__hero__inner__details__btn-cont'>
-                <a href='#' className='c-button__secondary is-full' data-aos='fade-up' data-aos-delay='100' data-aos-duration='1000'>
+                <a
+                  href={resume}
+                  download='ronel-dejesus'
+                  className='c-button__secondary is-full'
+                  data-aos='fade-up'
+                  data-aos-delay='100'
+                  data-aos-duration='1000'
+                >
                   Download CV
                   <FaDownload className='c-button__secondary__icon' />
                 </a>
