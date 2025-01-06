@@ -2,7 +2,8 @@
   &__hero {
     height: auto;
     width: 100%;
-    background: url('/images/pages/home/pc/hero.jpg') no-repeat center center/cover;
+    background: url('/images/pages/home/pc/hero.jpg') no-repeat center
+      center/cover;
     position: relative;
     z-index: 1;
     mix-blend-mode: multiply;
@@ -89,7 +90,12 @@
 
           &__gradient {
             background: rgb(53, 79, 82);
-            background: linear-gradient(90deg, rgba(53, 79, 82, 1) 25%, rgba(132, 169, 139, 1) 50%, rgba(197, 216, 197, 1) 100%);
+            background: linear-gradient(
+              90deg,
+              rgba(53, 79, 82, 1) 25%,
+              rgba(132, 169, 139, 1) 50%,
+              rgba(197, 216, 197, 1) 100%
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -99,7 +105,12 @@
             color: #fff;
             letter-spacing: 0.05em;
             padding: 0 1rem;
-            background: linear-gradient(90deg, rgba(53, 79, 82, 1) 25%, rgba(132, 169, 139, 1) 50%, rgba(197, 216, 197, 1) 100%);
+            background: linear-gradient(
+              90deg,
+              rgba(53, 79, 82, 1) 25%,
+              rgba(132, 169, 139, 1) 50%,
+              rgba(197, 216, 197, 1) 100%
+            );
             -webkit-background-clip: text;
             -webkit-text-stroke: 1rem transparent;
             animation: gradient 5s ease infinite;
@@ -524,7 +535,8 @@
         font-size: 2rem;
         font-family: $poppins;
         margin: 10rem auto 0;
-        background: url('/images/common/pc/call-me.svg') no-repeat center center/contain;
+        background: url('/images/common/pc/call-me.svg') no-repeat center
+          center/contain;
         height: 50rem;
         width: 50rem;
 
@@ -546,6 +558,11 @@
           border-radius: 20rem;
           text-decoration: none;
           transition: 0.3s;
+          pointer-events: none;
+
+          @include sp {
+            pointer-events: all;
+          }
 
           &__txt {
             font-size: 2.5rem;
@@ -554,6 +571,22 @@
 
             @include sp {
               font-size: 2rem;
+            }
+
+            &.is-pc {
+              display: block;
+
+              @include sp {
+                display: none;
+              }
+            }
+
+            &.is-sp {
+              display: none;
+
+              @include sp {
+                display: block;
+              }
             }
           }
 
@@ -568,9 +601,9 @@
             }
           }
 
-          &:hover {
-            border: 0.3rem solid #333;
-          }
+          // &:hover {
+          //   border: 0.3rem solid #333;
+          // }
         }
       }
     }
