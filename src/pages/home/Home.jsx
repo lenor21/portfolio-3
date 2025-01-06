@@ -5,6 +5,9 @@ import { motion, useInView, useAnimation } from 'framer-motion';
 import { register } from 'swiper/element/bundle';
 import Projects from '../../assets/data/Projects';
 import Card from '../../components/card/Card';
+import CardSplide from '../../components/card/CardSplide';
+import { Splide, SplideTrack } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
 import Faq from '../../assets/data/Faq';
 import Accordion from '../../components/accordion/Accordion';
 import Form from '../../components/form/Form';
@@ -20,8 +23,12 @@ const Home = () => {
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
 
+  // const cards = Projects.map((item) => {
+  //   return <Card key={item.id} {...item} />;
+  // });
+
   const cards = Projects.map((item) => {
-    return <Card key={item.id} {...item} />;
+    return <CardSplide key={item.id} {...item} />;
   });
 
   useEffect(() => {
@@ -514,7 +521,7 @@ const Home = () => {
               <p className='c-heading__txt'>PROJECTS</p>
             </h2>
 
-            <div
+            {/* <div
               className='p-home__projects__inner__items'
               data-aos='fade-up'
               data-aos-duration='1000'>
@@ -526,6 +533,40 @@ const Home = () => {
                 className='p-home__projects__inner__items__slide'>
                 {cards}
               </swiper-container>
+            </div> */}
+
+            <div
+              className='p-home__projects__inner__items'
+              data-aos='fade-up'
+              data-aos-duration='1000'>
+              <Splide
+                hasTrack={false}
+                options={{
+                  type: 'slide',
+                  height: 'auto',
+                  gap: '3rem',
+                  autoWidth: true,
+                  autoHeight: true,
+                  pagination: true,
+                  breakpoints: {
+                    750: {
+                      width: '100%',
+                      fixedWidth: '10rem',
+                      autoWidth: true,
+                      pagination: true,
+                    },
+                  },
+                  classes: {
+                    arrows: 'splide__arrows c-card-splide__arrows',
+                    arrow: 'splide__arrow c-card-splide__arrow is-arrow',
+                    prev: 'splide__arrow--prev c-card-splide__prev',
+                    next: 'splide__arrow--next c-card-splide__next',
+                    pagination: 'splide__pagination c-card-splide__pagination', // container
+                    page: 'splide__pagination__page c-card-splide__page', // each button
+                  },
+                }}>
+                <SplideTrack>{cards}</SplideTrack>
+              </Splide>
             </div>
 
             <div className='p-home__projects__inner__links'>

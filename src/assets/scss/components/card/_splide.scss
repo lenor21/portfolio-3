@@ -1,0 +1,97 @@
+.c-card-splide {
+  background: #ccd1d2;
+  width: 34rem;
+  height: auto;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  @include sp {
+    width: 100%;
+  }
+
+  &__img-cont {
+    width: 100%;
+    height: 25rem;
+    border-radius: 1rem 1rem 0 0;
+    overflow: hidden;
+    padding: 2rem 0;
+
+    &__img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent;
+    }
+  }
+
+  &__details {
+    font-family: $poppins;
+    padding: 2rem;
+    color: #333;
+
+    &__ttl {
+      font-size: 2.6rem;
+      line-height: normal;
+      font-weight: bold;
+    }
+
+    &__desc {
+      font-size: 1.8rem;
+      line-height: normal;
+    }
+
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      margin-top: 2rem;
+
+      &__btn {
+        width: 100%;
+      }
+    }
+  }
+
+  &__arrow {
+    &.is-arrow {
+      width: 5rem;
+      height: 5rem;
+      background: #fff;
+
+      @include sp {
+        width: 4rem;
+        height: 4rem;
+      }
+
+      svg {
+        fill: #333;
+      }
+    }
+  }
+
+  &__prev {
+    left: -3em;
+
+    @include sp {
+      left: -2em;
+    }
+  }
+
+  &__next {
+    right: -3em;
+
+    @include sp {
+      right: -2em;
+    }
+  }
+
+  &__pagination {
+    bottom: -3rem;
+  }
+
+  &__page {
+    &.is-active {
+      background: #c5d8c5;
+    }
+  }
+}
