@@ -1,87 +1,91 @@
 .c-form {
-    font-size: 1.8rem;
-    font-family: $poppins;
-    margin-top: 10rem;
+  font-size: 1.8rem;
+  font-family: $poppins;
+  margin-top: 10rem;
+
+  @include sp {
+    margin-top: 0;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+    background: #c5d8c5;
+    padding: 10rem 15rem;
+    border-radius: 2rem;
+    border: 0.2rem solid #333;
+
+    @include tablet {
+      padding: 10rem 5rem;
+    }
 
     @include sp {
-        margin-top: 0;
+      padding: 3rem 2rem;
+      row-gap: 3rem;
     }
-    
-    &__wrap {
-        display: flex;
-        flex-direction: column;
-        row-gap: 5rem;
-        background: #C5D8C5;
-        padding: 10rem 15rem;
-        border-radius: 2rem;
-        border: 0.2rem solid #333;
+  }
 
-        @include sp {
-            padding: 3rem 2rem;
-            row-gap: 3rem;
-        }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    @include sp {
+      row-gap: 1rem;
     }
 
-    &__item {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2rem;
+    &__label {
+      font-size: 2rem;
+      font-weight: bold;
 
-        @include sp {
-            row-gap: 1rem;
-        }
-
-        &__label {
-            font-size: 2rem;
-            font-weight: bold;
-
-            @include sp {
-                font-size: 1.6rem;
-            }
-        }
-
-        &__input {
-            padding: 2rem;
-            border: 0.2rem solid #333;
-            border-radius: 1rem;
-            max-width: 100%;
-            font-size: 2rem;
-
-            @include sp {
-                font-size: 1.6rem;
-            }
-            
-            &::placeholder {
-                color: #ddd;
-            }
-        }
-
-        &__textarea {
-            padding: 2rem;
-            border: 0.2rem solid #333;
-            border-radius: 1rem;
-            max-width: 100%;
-            height: 30rem;
-            font-size: 2rem;
-
-            @include sp {
-                font-size: 1.6rem;
-                height: 20rem;
-            }
-
-            &::placeholder {
-                color: #ddd;
-            }
-        }
+      @include sp {
+        font-size: 1.6rem;
+      }
     }
 
-    &__btn-cont {
-        display: grid;
-        place-items: center;
-        margin-top: 4rem;
+    &__input {
+      padding: 2rem;
+      border: 0.2rem solid #333;
+      border-radius: 1rem;
+      max-width: 100%;
+      font-size: 2rem;
 
-        @include sp {
-            margin-top: 2rem;
-        }
+      @include sp {
+        font-size: 1.6rem;
+      }
+
+      &::placeholder {
+        color: #ddd;
+      }
     }
+
+    &__textarea {
+      padding: 2rem;
+      border: 0.2rem solid #333;
+      border-radius: 1rem;
+      max-width: 100%;
+      height: 30rem;
+      font-size: 2rem;
+
+      @include sp {
+        font-size: 1.6rem;
+        height: 20rem;
+      }
+
+      &::placeholder {
+        color: #ddd;
+      }
+    }
+  }
+
+  &__btn-cont {
+    display: grid;
+    place-items: center;
+    margin-top: 4rem;
+
+    @include sp {
+      margin-top: 2rem;
+    }
+  }
 }
