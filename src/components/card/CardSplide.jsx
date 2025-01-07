@@ -6,6 +6,7 @@ const CardSplide = (props) => {
   return (
     <SplideSlide className='p-home__projects__inner__items__splide__slide'>
       <div className='c-card-splide'>
+        {props.new && <div className='c-card-splide__new'>New!</div>}
         <div className='c-card-splide__img-cont'>
           <img
             className='c-card-splide__img-cont__img'
