@@ -1,17 +1,28 @@
 .c-loader {
-    height: 100vh;
-    width: 100%;
-    background: #333;
-    display: grid;
-    place-items: center;
-    color: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1001;
+  height: 100vh;
+  width: 100%;
+  background: #333;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1001;
 
-    &__icon {
-        height: 5rem;
-        width: 5rem;
-    }
+  &__icon {
+    height: 5rem;
+    width: 5rem;
+    animation: 2s infinite alternate spin;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: scale(0.5) rotate(0deg);
+  }
+
+  to {
+    transform: scale(1.5) rotate(720deg);
+  }
 }
