@@ -542,7 +542,7 @@ const Home = () => {
               <Splide
                 hasTrack={false}
                 options={{
-                  type: 'slide',
+                  type: 'loop',
                   height: 'auto',
                   gap: '3rem',
                   autoWidth: true,
