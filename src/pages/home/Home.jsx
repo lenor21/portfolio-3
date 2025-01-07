@@ -4,7 +4,6 @@ import { useEffect, useRef } from 'react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 import { register } from 'swiper/element/bundle';
 import Projects from '../../assets/data/Projects';
-import Card from '../../components/card/Card';
 import CardSplide from '../../components/card/CardSplide';
 import { Splide, SplideTrack } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
@@ -22,10 +21,6 @@ const Home = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
-
-  // const cards = Projects.map((item) => {
-  //   return <Card key={item.id} {...item} />;
-  // });
 
   const cards = Projects.map((item) => {
     return <CardSplide key={item.id} {...item} />;
@@ -127,6 +122,7 @@ const Home = () => {
                 src='/images/pages/home/pc/hero.svg'
                 alt='hero-img'
                 className='p-home__hero__inner__img-cont__img'
+                loading='lazy'
               />
             </div>
           </div>
@@ -159,18 +155,21 @@ const Home = () => {
                     <img
                       className='p-home__about__inner__details__slide__container__img-cont__img'
                       src='/images/pages/home/pc/img-about-01.jpg'
+                      loading='lazy'
                     />
                   </swiper-slide>
                   <swiper-slide className='p-home__about__inner__details__slide__container__img-cont'>
                     <img
                       className='p-home__about__inner__details__slide__container__img-cont__img'
                       src='/images/pages/home/pc/img-about-02.jpeg'
+                      loading='lazy'
                     />
                   </swiper-slide>
                   <swiper-slide className='p-home__about__inner__details__slide__container__img-cont'>
                     <img
                       className='p-home__about__inner__details__slide__container__img-cont__img'
                       src='/images/pages/home/pc/img-about-03.jpeg'
+                      loading='lazy'
                     />
                   </swiper-slide>
                   ...
@@ -260,6 +259,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -276,6 +276,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -292,6 +293,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -308,6 +310,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -324,6 +327,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -340,6 +344,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -356,6 +361,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -372,6 +378,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -388,6 +395,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -404,6 +412,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -420,6 +429,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -436,6 +446,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -452,6 +463,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -468,6 +480,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -484,6 +497,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -500,6 +514,7 @@ const Home = () => {
                   <img
                     className='p-home__skills__inner__content__items__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg'
+                    loading='lazy'
                   />
                 </div>
                 <div className='p-home__skills__inner__content__items__hover'>
@@ -520,20 +535,6 @@ const Home = () => {
               data-aos-duration='1000'>
               <p className='c-heading__txt'>PROJECTS</p>
             </h2>
-
-            {/* <div
-              className='p-home__projects__inner__items'
-              data-aos='fade-up'
-              data-aos-duration='1000'>
-              <swiper-container
-                slides-per-view={window.innerWidth > 768 ? '3' : '1'}
-                space-between='30'
-                loop='true'
-                navigation='true'
-                className='p-home__projects__inner__items__slide'>
-                {cards}
-              </swiper-container>
-            </div> */}
 
             <div
               className='p-home__projects__inner__items'
@@ -581,6 +582,7 @@ const Home = () => {
                   <img
                     className='p-home__projects__inner__links__link__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg'
+                    loading='lazy'
                   />
                 </div>
                 <p className='p-home__projects__inner__links__link__txt'>
@@ -598,6 +600,7 @@ const Home = () => {
                   <img
                     className='p-home__projects__inner__links__link__img-cont__img'
                     src='https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codepen/codepen-original.svg'
+                    loading='lazy'
                   />
                 </div>
                 <p className='p-home__projects__inner__links__link__txt'>

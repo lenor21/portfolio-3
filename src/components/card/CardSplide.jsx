@@ -12,6 +12,7 @@ const CardSplide = (props) => {
             className='c-card-splide__img-cont__img'
             src={`/images/common/pc/${props.image}`}
             alt='Image 1'
+            loading='lazy'
           />
         </div>
         <div className='c-card-splide__details'>
